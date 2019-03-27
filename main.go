@@ -29,15 +29,24 @@ func main() {
 			c, _ := strconv.Atoi(capacity)
 			createParkingLot(c)
 		case "park":
-			carNo := subInput[1]
-			carColor := subInput[2]
-			addCar(carNo, carColor)
+			No := subInput[1]
+			Color := subInput[2]
+			addCar(No, Color)
 		case "status":
 			status()
 		case "leave":
 			leaveSpot := subInput[1]
 			ls, _ := strconv.Atoi(leaveSpot)
 			leaveCar(ls)
+		case "registration_numbers_for_cars_with_colour":
+			Color := subInput[1]
+			registrationNumbersForCarsWithColour(Color)
+		case "slot_numbers_for_cars_with_colour":
+			Color := subInput[1]
+			slotNumbersForCarsWithColour(Color)
+		case "slot_number_for_registration_number":
+			No := subInput[1]
+			slotNumberForRegistrationNumber(No)
 		default:
 			fmt.Println("Enter right response")
 		}
