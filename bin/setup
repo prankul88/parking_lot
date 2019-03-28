@@ -1,6 +1,8 @@
 # Add script to:
 # * Install dependencies
 # * Build/Compile
+go run main.go parking_lot.go
+fo run parking_test.go
 # * Run Test Suit to validate
 #
 # After this is run, bin/parking_lot

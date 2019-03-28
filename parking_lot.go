@@ -9,6 +9,7 @@ type details struct {
 	carColor string
 }
 
+//Creates a parking lot of capacity "c"
 func createParkingLot(c int) {
 	//parkingLot = make(map[int]string)
 	fmt.Println("Created a parking lot with", c, "slots")
@@ -17,6 +18,7 @@ func createParkingLot(c int) {
 	}
 }
 
+//Allocates the nearest available parking lot to a car
 func addCar(No string, Color string) {
 	temp := 0
 	flag := details{carNo: "", carColor: ""}
@@ -45,12 +47,12 @@ func leaveCar(ls int) {
 	fmt.Println("Slot number", ls, "is empty")
 }
 
-//Status will mention
+//Status function will give the current chart of parking lot
 func status() {
 
 	fmt.Println("Slot No.  Registration No	 Colour")
 	for no, detail := range parkingLot {
-		fmt.Println(no, "       ", detail.carNo, "  ", detail.carColor)
+		fmt.Println(no, "       ", detail.carNo, "        ", detail.carColor)
 	}
 }
 
